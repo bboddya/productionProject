@@ -27,7 +27,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             //конфигурируем лоадеры. Они нужны, чтобы обрабатывать файлы, которые выходят за рамки js (css, png, jpeg и тд)
             rules: buildLoaders(options),
         },
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         //позволяет отслеживать ошибки в коде
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined
