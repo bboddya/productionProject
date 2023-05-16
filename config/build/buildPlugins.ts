@@ -20,6 +20,8 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         // позволяет создать глобальные переменные, которые можно использовать внутри других плагинов
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
-        })
+        }),
+        // обновляет изменения без перезагрузки страницы
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
