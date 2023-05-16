@@ -4,6 +4,7 @@ import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 
 const AppRouter = () => {
     return (
+        // Suspense - отображает любое содержимое, пока идет загрузка
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
                 {Object.values(routeConfig).map(({ element, path }) => (

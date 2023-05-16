@@ -1,9 +1,13 @@
-import React from 'react';
+ import React from 'react';
+import {useTranslation} from "react-i18next";
 
 const MainPage = () => {
+    //указание файла, который нужно подгрузить к странице
+    const {t} = useTranslation('main')
+
     return (
         <div>
-            MainPage
+            {t('Главная страница')}
         </div>
     );
 };
