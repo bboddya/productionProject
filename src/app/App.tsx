@@ -1,13 +1,13 @@
 import './styles/index.scss';
 import {classNames} from "shared/lib/classNames/classNames";
 import {useTheme} from "app/providers/ThemeProvider";
-import { AppRouter } from './providers/router';
+import {AppRouter} from './providers/router';
 import {Navbar} from "widgets/Navbar";
 import {Sidebar} from "widgets/Sidebar";
 import {Suspense} from "react";
 
 const App = () => {
-   const { theme } = useTheme();
+    const {theme} = useTheme();
 
     return (
         <div
@@ -15,10 +15,11 @@ const App = () => {
         >
             {/*обернул в Suspense еще раз, тк требуется для использования i18n плагина*/}
             <Suspense fallback="">
-                <Navbar />
+                <Navbar/>
+
                 <div className="content-page">
-                    <Sidebar />
-                    <AppRouter />
+                    <Sidebar/>
+                    <AppRouter/>
                 </div>
             </Suspense>
         </div>

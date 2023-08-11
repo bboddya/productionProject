@@ -1,7 +1,8 @@
- {
+{
   "Тестовый пример": "Test example",
   "Перевод": "Translate",
   "Главная": "Main",
   "О сайте": "About us",
-  "Язык": "English"
+  "Язык": "English",
+  "Переключить": "Switch"
 }
